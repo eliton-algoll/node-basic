@@ -11,6 +11,8 @@ function validateRepositorieId(request, response, next){
   if(!isUuid(id)){
     return response.status(400).json({error: "Invalid repositorie ID."});
   }
+
+  return next();
 } 
 
 const app = express();
